@@ -62,6 +62,7 @@ KeyDialog::KeyDialog(const QByteArray& _key, bool _isTracking, QWidget *_parent)
   , m_isExport(true)
   , m_key(_key) {
   m_ui->setupUi(this);
+  setWindowTitle(m_isTracking ? tr("Export tracking key") : tr("Export key"));
   m_ui->m_fileButton->setText(tr("Save to file"));
   m_ui->m_okButton->setText(tr("Close"));
   m_ui->m_keyEdit->setReadOnly(true);
@@ -74,7 +75,6 @@ KeyDialog::KeyDialog(const QByteArray& _key, bool _isTracking, QWidget *_parent)
   m_ui->m_cancelButton->hide();
   setFixedHeight(195);
   setStyleSheet(Settings::instance().getCurrentStyle().makeStyleSheet(KEY_DIALOG_STYLE_SHEET_TEMPLATE));
-  setWindowTitle(m_isTracking ? tr("Export tracking key") : tr("Export key"));
 }
 
 KeyDialog::KeyDialog(const QByteArray& _key, bool _isTracking, bool _isPrivateKeyExport, QWidget *_parent)

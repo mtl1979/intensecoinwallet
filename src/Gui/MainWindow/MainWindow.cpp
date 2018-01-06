@@ -690,10 +690,10 @@ void MainWindow::encryptWallet() {
 }
 
 void MainWindow::exportKey() {
-	if (m_cryptoNoteAdapter->getNodeAdapter() == nullptr ||
-		m_cryptoNoteAdapter->getNodeAdapter()->getWalletAdapter() == nullptr ||
-		!m_cryptoNoteAdapter->getNodeAdapter()->getWalletAdapter()->isOpen())
-		return;
+  if (m_cryptoNoteAdapter->getNodeAdapter() == nullptr ||
+      m_cryptoNoteAdapter->getNodeAdapter()->getWalletAdapter() == nullptr ||
+      !m_cryptoNoteAdapter->getNodeAdapter()->getWalletAdapter()->isOpen())
+    return;
   AccountKeys accountKeys = m_cryptoNoteAdapter->getNodeAdapter()->getWalletAdapter()->getAccountKeys(0);
   QByteArray keys = convertAccountKeysToByteArray(accountKeys);
   KeyDialog dlg(keys, false, this);

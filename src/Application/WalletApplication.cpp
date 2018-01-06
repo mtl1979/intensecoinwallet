@@ -265,7 +265,7 @@ bool WalletApplication::initCryptoNoteAdapter() {
       dlg.setText(QObject::tr("The database is currently used by another application or service.\n"
       "If you have intensecoind with non-default RPC port, you should terminate it and relaunch IntensecoinWallet\n"
       "or\n"
-      "Set the Local deamon required port in IntensecoinWallet Menu/Preferences/Connection settings."));
+      "Set the Local daemon required port in IntensecoinWallet Menu/Preferences/Connection settings."));
 	  if (m_splash != nullptr)
 		  m_splash->hide();
       dlg.exec();

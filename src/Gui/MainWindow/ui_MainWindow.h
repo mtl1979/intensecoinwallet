@@ -579,7 +579,7 @@ public:
         menuFile->addAction(m_exitAction);
         menuSettings->addAction(m_encryptWalletAction);
         menuSettings->addAction(m_changePasswordAction);
-        //menuSettings->addAction(m_removePendingTxAction);
+        menuSettings->addAction(m_removePendingTxAction);
         menuSettings->addSeparator();
         menuSettings->addAction(m_autostartAction);
         menuSettings->addAction(m_minimizeToTrayAction);
