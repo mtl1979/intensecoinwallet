@@ -113,10 +113,6 @@ void Settings::init() {
     cfgFile.close();
   }
 
-  if (isOptimizationEnabled()) {
-	  setOptimizationEnabled(false);
-  }
-
   restoreDefaultPoolList();
 }
 
